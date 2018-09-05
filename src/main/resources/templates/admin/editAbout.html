@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jiang's blog后台</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/common.css}">
+    <link rel="stylesheet" th:href="@{css/about.css}">
+    <link rel="stylesheet" th:href="@{editor/examples/css/style.css}" />
+    <link rel="stylesheet" th:href="@{editor/css/editormd.css}" />
+    <link rel="stylesheet" th:href="@{editor/css/editormd.preview.min.css}" />
+    <link rel="stylesheet"  th:href="@{css/bootstrap-3.3.7-dist/css/bootstrap.min.css}">
+    <script th:src="@{js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{css/bootstrap-3.3.7-dist/js/bootstrap.min.js}"></script>
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <div class="header-left"></div>
+        <div calss="header-contener">
+            <ul class="box">
+                <li><a class="linking" href="/admin">INDEX</a></li>
+                <li><a class="linking" href="blog.html">BLOGS</a></li>
+                <li><a class="linking" href="/about">ABOUT ME</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="inner-header">
+        <div class="header-img">
+            <img th:src="@{images/header.jpg}">
+        </div>
+    </div>
+</header>
+<div id="layout">
+    <button class="about-bto" id="submit_button" >保存修改</button>
+    <div id="test-editormd">
+        <!-- 书写与实时显示的textarea -->
+        <textarea id="my-editormd-markdown-doc" name="my-editormd-markdown-doc" style="display:none;"></textarea>
+        <!-- 用于后端获取md稳当内容，Java中：request.getParameter("my-editormd-html-code")。  -->
+        <textarea id="my-editormd-html-code" name="my-editormd-html-code" style="display:none;"></textarea>
+    </div>
+</div>
+<script th:src="@{editor/examples/js/jquery.min.js}"></script>
+<!--<script th:src=@{admin/editor/lib/marked.min.js}"></script>-->
+<script th:src="@{editor/lib/prettify.min.js}"></script>
+<script th:src="@{editor/editormd.min.js}"></script>
+<script type="text/javascript">
+    var testEditor;
+    $(function() {
+        testEditor = editormd("test-editormd", {
+            width: "90%",
+            height: 640,
+            syncScrolling: "single",
+            path: "editor/lib/",
+            saveHTMLToTextarea: true
+        });
+
+        $("#submit_button").click(function () {
+            $.ajax({
+                type: "post",
+                url: "/edit",
+                data: {
+                    content: $("#my-editormd-html-code").val(),
+                },
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                /*dataType: "text",*/
+                success: function (data) {
+                    console.log(data);
+                    alert("修改成功");
+                    window.location.href="/about";
+                },
+                error: function () {
+
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>

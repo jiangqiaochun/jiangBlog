@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jiang's blog后台</title>
+    <link rel="stylesheet" type="text/css" th:href="@{index/css/common.css}">
+    <link rel="stylesheet" th:href="@{admin/css/about.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{admin/editor/css/editormd.css}" />
+    <link rel="stylesheet"  th:href="@{index/css/bootstrap-3.3.7-dist/css/bootstrap.min.css}">
+    <script th:src="@{admin/js/jquery.min.js}" type="text/javascript" charset="utf-8"></script>
+    <script th:src="@{admin/editor/editormd.js}" type="text/javascript" charset="utf-8"></script>
+
+    <script th:src="@{admin/editor/lib/marked.min.js}"></script>
+    <script th:src="@{admin/editor/lib/prettify.min.js}"></script>
+    <script th:src="@{admin/editor/lib/raphael.min.js}"></script>
+    <script th:src="@{admin/editor/lib/underscore.min.js}"></script>
+    <script th:src="@{admin/editor/lib/sequence-diagram.min.js}"></script>
+    <script th:src="@{admin/editor/lib/flowchart.min.js}"></script>
+    <script th:src="@{admin/editor/lib/jquery.flowchart.min.js}"></script>
+</head>
+<body>
+<header>
+    <div class="header-top">
+        <div class="header-left"></div>
+        <div calss="header-contener">
+            <ul class="box">
+                <li><a class="linking" href="about.html">ABOUT ME</a></li>
+                <li><a class="linking" href="blog.html">BLOGS</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="inner-header">
+        <div class="header-img">
+            <img th:src="@{index/images/header.jpg}">
+        </div>
+    </div>
+</header>
+<!--<div id="wordsView">
+            <textarea style="display:none;" name="editormd-markdown-doc" id="mdText">
+
+             </textarea>
+</div>-->
+<div class="content editormd-preview-theme" id="content">${user.about!''}</div>
+<script th:src="@{admin/editor/examples/js/jquery.min.js}"></script>
+<!--<script th:src=@{admin/editor/lib/marked.min.js}"></script>-->
+<script th:src="@{admin/editor/lib/prettify.min.js}"></script>
+<script th:src="@{admin/editor/editormd.min.js}"></script>
+<script type="text/javascript">
+    editormd.markdownToHTML("about");
+</script>
+</body>
+</html>

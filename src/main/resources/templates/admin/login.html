@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" type="text/css" th:href="@{admin/css/uploading.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{admin/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{admin/css/reset.css}">
+    <script type="text/javascript" th:src="@{admin/js/bootstrap.min.js}"></script>
+</head>
+<body class="upload_page">
+    <div class="login">
+        <div class="top">
+            Login
+        </div>
+        <form action="/admin/toLogin" method="get">
+          <div class="input-group login_input">
+            <span class="input-group-addon" id="basic-addon1">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </span>
+            <input name="username" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group login_input">
+            <span class="input-group-addon" id="basic-addon1">
+                <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
+            </span>
+            <input name="password" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+          </div>
+          <button type="submit" class="btn btn-info login_btn">登录</button>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+  
+</script>
+</html>

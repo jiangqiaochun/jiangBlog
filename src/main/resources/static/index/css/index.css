@@ -1,0 +1,82 @@
+
+
+.carousel{
+    width: 90%;
+    height: 500px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.banner {
+    height: 500px;
+    width: 90%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.banner-img {
+    width: 100%;
+    height: 500px !important;
+   
+}
+.container{
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.content{
+    /*width: 75%;*/
+    /*float: left;*/
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.content-brief{
+    width: 80%;
+    height: 25px;
+    overflow: hidden;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.content-brief p{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.brief h2{
+    font-weight: 700;
+}
+.author{
+    color: #ccc;
+}
+.sider-bar{
+    position: relative;
+    width: 25%;
+    float: left;
+    padding-left: 3%;
+    padding-right: 8%;
+}
+.inner-bar{
+    position: relative;
+    
+}
+.inner-bar h5{
+    color: #ccc;
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+.inner-bar p{
+    color: #ccc;
+    font-weight: 700;
+}
+.photo{
+    width: 100%;
+    height: 100%;
+    margin-right: 20%;
+    margin-bottom: 20%;
+}

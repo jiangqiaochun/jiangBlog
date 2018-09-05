@@ -1,0 +1,32 @@
+.upload_page {
+	background: #ffffff;
+}
+.login {
+	background-color: #ffffff;
+    border-radius: 4px;
+    width: 420px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.top {
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	color: #768399;
+	background: #ffffff;
+	font-weight: 400;
+	text-align: center;
+}
+.login_input {
+	width: 330px;
+	margin-left: 45px;
+	margin-top: 30px;
+}
+.login_btn {
+	width: 330px;
+	margin-top: 20px;
+    margin-left: 45px;
+}

@@ -1,0 +1,26 @@
+
+
+hr{
+	margin-top: 0px!important;
+}
+.introduce{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10%;
+	padding-right: 10%;
+	position: relative;
+}
+.me{
+	width: 93%;
+	overflow: hidden;
+	padding-top: 1%;
+	padding-bottom: 2%;
+	
+	
+}
+.photo{
+	width: 20%;
+	float: right;
+	margin-top: 0px;
+}
