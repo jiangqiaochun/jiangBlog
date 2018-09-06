@@ -24,3 +24,17 @@ hr{
 	float: right;
 	margin-top: 0px;
 }
+.con{
+	padding-right: 5%;
+	padding-left: 5%;
+	margin-right: 5%;
+	margin-left: 5%;
+}
+.content{
+	/* width: 75%; */
+	/* float: left; */
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-left: 0px;
+	margin-right: 0px;
+}

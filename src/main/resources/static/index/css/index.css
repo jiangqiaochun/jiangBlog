@@ -50,6 +50,8 @@
 }
 .brief h2{
     font-weight: 700;
+    font-size: 1.75em;
+    line-height: 1.225;
 }
 .author{
     color: #ccc;
